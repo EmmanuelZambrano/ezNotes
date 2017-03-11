@@ -1,5 +1,5 @@
-document.getElementById('title').addEventListener('click', addNote, false);
+document.getElementById('runBtn').addEventListener('click', runClickHandler, false);
 
-function addNote(){
-  alert("it works");
+function runClickHandler() {
+  console.log('it works');
 }

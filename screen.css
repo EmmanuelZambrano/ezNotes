@@ -82,3 +82,6 @@ a{
   vertical-align: middle;
 
 }
+input{
+	display: block;
+}
