@@ -21,16 +21,22 @@ function creatNote(){
   var noteSubject = document.getElementById('subject').value;
   var noteMessage = document.getElementById('message').value;
   var noteDate = new Date();
-  /* localStorage Below*/
-  var myNote = {
-    name: noteName,
-    subject: noteSubject,
-    message: noteMessage,
-    date: noteDate
+
+  if(noteName.trim() === '' || noteSubject.trim() === ''){
+    alert("Insert values");
   }
-  localStorage.setItem(noteName, JSON.stringify(myNote));
-  content.innerHTML = '';
-  getNotes();
+  else {
+    /* localStorage Below*/
+    var myNote = {
+      name: noteName,
+      subject: noteSubject,
+      message: noteMessage,
+      date: noteDate
+    }
+    localStorage.setItem(noteName, JSON.stringify(myNote));
+    content.innerHTML = '';
+    getNotes();
+  }
 
 }
 
