@@ -12,59 +12,7 @@
       <h1>ezNotes</h1>
     </div>
     <div id="content">
-      <h2>My Notes</h2>
-      <button id="createBtn">Create New Note</button>
     </div>
-    <script>
-      var contentDiv = document.getElementById('content');
-
-      document.getElementById('createBtn').addEventListener('click', createForm, false);
-
-      function createForm() {
-        var content = document.getElementById('content');
-        content.innerHTML = '';
-        var noteWrapper = document.createElement('div');
-        var noteForm = '<form><label>Name<input id="name" type="text" name="name"></label>';
-        noteForm += '<label>Subject<input id="subject" type="text" name="subject"></label>';
-        noteForm += '<textarea id="message" placeholder="Ideas go here."></textarea>'
-        noteForm += '<input id="sendForm" type="submit" value="Create Note"></form>';
-        noteWrapper.innerHTML = noteForm;
-        content.appendChild(noteWrapper);
-        document.getElementById('sendForm').addEventListener('click', creatNote, false);
-
-      }
-      function creatNote(){
-        var noteName = document.getElementById('name').value;
-        var noteSubject = document.getElementById('subject').value;
-        var noteMessage = document.getElementById('message').value;
-        var noteDate = new Date();
-        /* localStorage Below*/
-        
-        getNotes();
-      }
-      function viewNote() {
-        var content = document.getElementById('content');
-        content.innerHTML = '';
-      }
-      function updateNote() {
-        var content = document.getElementById('content');
-        content.innerHTML = '';
-        var header = '<h2>My Notes</h2><button id="createBtn">Create New Note</button>'
-        content.innerHTML = header;
-      }
-      function deleteNote() {
-        var content = document.getElementById('content');
-        content.innerHTML = '';
-        var header = '<h2>My Notes</h2><button id="createBtn">Create New Note</button>'
-        content.innerHTML = header;
-      }
-      function getNotes() {
-        var content = document.getElementById('content');
-        content.innerHTML = '';
-        var header = '<h2>My Notes</h2><button id="createBtn">Create New Note</button>'
-        content.innerHTML = header;
-      }
-
-    </script>
+    <script type="text/javascript" src="script.js"></script>	
   </body>
 </html>

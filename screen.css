@@ -49,14 +49,17 @@ table {
 /*My Css Rules*/
 body{
   font-family: 'Roboto', sans-serif;
+	width: 100%;
   background: #F8FBFF;
   line-height: 2.618em;
 }
 #title{
   padding: 2.618em 2.618em 2.618em 2.618em;
   background: #E0E2E5;
+	width: 100%;
 }
 #content{
+	width: 100%;
   padding: 2.618em 2.618em 2.618em 2.618em;
 }
 h1{
@@ -72,16 +75,36 @@ h2{
 p{
   font-size: 1em;
   color: #7C7E7F;
+	margin-right: 1em;
 }
-a{
-
+.noteLabel{
+	margin-right: .382em;
+	font-weight: bold;
 }
 #addbtn{
   width: 2.618em;
   height: 2.618em;
-  vertical-align: middle;
-
+}
+#content div{
+	width: 100%;
+	background: #E0E2E5;
+	margin-bottom: .618em;
+}
+.errorMessage{
+	display: block;
+}
+p{
+	display: inline;
 }
 input{
+	width: 100%;
 	display: block;
+}
+label{
+	display: inline;
+}
+textarea{
+	width: 100%;
+	height: 17.086em;
+	resize: none;
 }
